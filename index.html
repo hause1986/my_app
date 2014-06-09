@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/phonegap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+	<script>
+		function max_height(){
+			h = $('div#title').outerHeight(true);
+			f = $('div#footer').outerHeight(true);
+			w = $(window).height();
+			c = $('div#content');
+			c_h = c.height();
+			c_oh = c.outerHeight(true);
+			c_new = w - h - f - c_oh + c_h;
+			total = h + f + c_oh;
+			if(c_h<c.get(0).scrollHeight){
+				c.height(c.get(0).scrollHeight);
+			}else{
+				c.height(c_new);
+			}
+		}
+		$(document).ready(function(){
+			max_height();		
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+	<div id="page">
+		<div id="title"><h1>Hello</h1></div>
+		<div id="content">Hello</div>
+		<div id="footer"><h4>Panin Sergy</h4></div>
+	</div>
+</body>
+</html>
