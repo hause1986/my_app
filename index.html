@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-	<script type="text/javascript" src="js/phonegap.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
 	<script>
 		function max_height(){
 			h = $('div#title').outerHeight(true);
@@ -26,7 +26,6 @@
 		$(document).ready(function(){
 			max_height();
 			$('#content').click(function(){
-				console.log($(this).hasClass('wayt'))
 			
 				if($(this).hasClass('wayt')){
 					$(this).removeClass('wayt').addClass('blek');
