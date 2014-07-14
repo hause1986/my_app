@@ -22,16 +22,29 @@
 				c.height(c_new);
 			}
 		}
+		
 		$(document).ready(function(){
-			max_height();		
+			max_height();
+			$('#content').click(function(){
+				console.log($(this).hasClass('wayt'))
+			
+				if($(this).hasClass('wayt')){
+					$(this).removeClass('wayt').addClass('blek');
+					$('body').css('background-color', '#fff');
+				}else{
+					$(this).removeClass('blek').addClass('wayt');
+					$('body').css('background-color', '#000');
+				}		
+			});			
 		});
+
 	</script>
 	<title></title>
 </head>
 <body>
 	<div id="page">
 		<div id="title"><h1>Hello</h1></div>
-		<div id="content">Hello</div>
+		<div id="content" class="wayt">body</div>
 		<div id="footer"><h4>Panin Sergy</h4></div>
 	</div>
 </body>
